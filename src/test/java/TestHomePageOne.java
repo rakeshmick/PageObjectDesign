@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by rakeshprabhakaran on 24/10/2015.
  */
-public class TestHomePage {
+public class TestHomePageOne {
 
     WebDriver driver;
 

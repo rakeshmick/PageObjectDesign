@@ -8,7 +8,7 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
  * Created by rakeshprabhakaran on 14/11/2015.
  */
 public class BasePage {
-    WebDriver driver;
+    public WebDriver driver;
 
     public BasePage(WebDriver driver)
         {

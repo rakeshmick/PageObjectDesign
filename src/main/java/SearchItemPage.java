@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocator;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Clock;
 import org.openqa.selenium.support.ui.SystemClock;
@@ -22,6 +23,7 @@ public class SearchItemPage extends BasePage {
 
     public SearchItemPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver,20),SearchItemPage.class);
     }
 
 
@@ -29,7 +31,7 @@ public class SearchItemPage extends BasePage {
 
 
       Clock clock= new SystemClock();
-       // clock.now()
+
         searchIcon.click();
         searchItemField.sendKeys("Orange");
 

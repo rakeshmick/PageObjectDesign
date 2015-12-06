@@ -1,20 +1,16 @@
 import HelpersPackage.BasePage;
-import junit.framework.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.LoadableComponent;
-
-import java.util.NoSuchElementException;
+import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 /**
  * Created by rakeshprabhakaran on 24/10/2015.
  */
 public class LandingPage extends BasePage{
 
-
+    LandingPage landingPage;
 
     @FindBy(css=".globalHeader-topPanel-wappleFull.u-noOutline")
     WebElement globalHeaderTopPanel;
@@ -23,12 +19,16 @@ public class LandingPage extends BasePage{
     WebElement navigationHeader;
 
 
-    //Clock clock=new org.openqa.selenium.support.ui.SystemClock();
 
 
-    LandingPage(WebDriver driver)
-    {
+    LandingPage(WebDriver driver) {
         super(driver);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), LandingPage.class);
 
+    }
+
+    public LandingPage landingPageObj(){
+         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), LandingPage.class);
+       return  this;
     }
 }
