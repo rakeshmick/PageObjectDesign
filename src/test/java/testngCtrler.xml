@@ -4,6 +4,7 @@
     <test name="Nopackage" >
         <classes>
             <class name="TestHomePageOne" />
+            <class name="TestHomePage" />
         </classes>
     </test>
 </suite>
